@@ -26,5 +26,12 @@ public class SketchService {
     }
 
 
+    public Sketch getSketchById(int deptId) {
 
-}
+            return sketchRepo.findById(deptId)
+                    .orElseThrow(() -> new RuntimeException("Sketch not found with deptId: " + deptId));
+        }
+
+
+    }
+

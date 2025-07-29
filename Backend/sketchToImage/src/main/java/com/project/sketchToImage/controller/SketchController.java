@@ -29,4 +29,8 @@ public class SketchController {
         return sketchService.saveSketch(sketch);
     }
 
+    @GetMapping("/sketch/{deptId}")
+    public Sketch getSketchById(@PathVariable int deptId) {
+        return sketchService.getSketchById(deptId);
+    }
 }
